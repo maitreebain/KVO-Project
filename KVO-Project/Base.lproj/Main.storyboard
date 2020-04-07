@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cAt-IJ-TA0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="R2k-wx-KWS">
+            <objects>
+                <viewController id="exK-CC-yE9" customClass="SettingsViewController" customModule="KVO_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hgO-KK-GX8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select font size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWa-j5-Nc4">
+                                <rect key="frame" x="20" y="64" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="KTX-iA-K1H">
+                                <rect key="frame" x="18" y="125" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="exK-CC-yE9" eventType="valueChanged" id="qB2-oZ-qSk"/>
+                                </connections>
+                            </slider>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-9z-SaS">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id8-2A-1cV">
+                                <rect key="frame" x="202" y="175" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H1L-9z-SaS" firstAttribute="centerY" secondItem="hgO-KK-GX8" secondAttribute="centerY" id="Az2-He-iHk"/>
+                            <constraint firstItem="sWa-j5-Nc4" firstAttribute="leading" secondItem="5wL-Dg-sMM" secondAttribute="leading" constant="20" id="Hia-bL-3za"/>
+                            <constraint firstItem="sWa-j5-Nc4" firstAttribute="top" secondItem="5wL-Dg-sMM" secondAttribute="top" constant="20" id="I2t-n3-CsH"/>
+                            <constraint firstItem="KTX-iA-K1H" firstAttribute="leading" secondItem="5wL-Dg-sMM" secondAttribute="leading" constant="20" id="OeW-Ue-uRI"/>
+                            <constraint firstItem="Id8-2A-1cV" firstAttribute="centerX" secondItem="hgO-KK-GX8" secondAttribute="centerX" id="SFu-2k-wYw"/>
+                            <constraint firstItem="Id8-2A-1cV" firstAttribute="top" secondItem="KTX-iA-K1H" secondAttribute="bottom" constant="20" id="VUI-SP-dhU"/>
+                            <constraint firstItem="5wL-Dg-sMM" firstAttribute="trailing" secondItem="sWa-j5-Nc4" secondAttribute="trailing" constant="20" id="kVK-Fa-pWw"/>
+                            <constraint firstItem="KTX-iA-K1H" firstAttribute="top" secondItem="sWa-j5-Nc4" secondAttribute="bottom" constant="40" id="lId-1H-fXN"/>
+                            <constraint firstItem="H1L-9z-SaS" firstAttribute="centerX" secondItem="hgO-KK-GX8" secondAttribute="centerX" id="ygS-pM-juC"/>
+                            <constraint firstItem="5wL-Dg-sMM" firstAttribute="trailing" secondItem="KTX-iA-K1H" secondAttribute="trailing" constant="20" id="zsV-3D-VNh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wL-Dg-sMM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="rWL-YR-Ia4"/>
+                    <connections>
+                        <outlet property="fontSizeLabel" destination="Id8-2A-1cV" id="Bsl-e4-ZQg"/>
+                        <outlet property="pickerView" destination="H1L-9z-SaS" id="YnA-Rm-FPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isI-PJ-7Vi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368.11594202898556" y="-43.526785714285715"/>
+        </scene>
+        <!--Welcome Page-->
+        <scene sceneID="9DM-yg-AaR">
+            <objects>
+                <viewController id="MiZ-5M-dlC" customClass="WelcomeViewController" customModule="KVO_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="siQ-cl-8cC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFd-HT-Yet">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uVN-Ah-bN1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vyj-fo-A0G">
+                                <rect key="frame" x="20" y="260.5" width="374" height="376"/>
+                                <color key="tintColor" red="0.8630036485" green="0.73522942670000002" blue="0.1369161361" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vyj-fo-A0G" secondAttribute="height" multiplier="1:1" id="qux-g7-aMz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="scs-pt-7Z9" firstAttribute="trailing" secondItem="CFd-HT-Yet" secondAttribute="trailing" constant="20" id="2iH-tO-9HV"/>
+                            <constraint firstItem="Vyj-fo-A0G" firstAttribute="centerX" secondItem="siQ-cl-8cC" secondAttribute="centerX" id="7HJ-WH-Wcx"/>
+                            <constraint firstItem="CFd-HT-Yet" firstAttribute="top" secondItem="scs-pt-7Z9" secondAttribute="top" constant="20" id="JsD-eG-SNI"/>
+                            <constraint firstItem="CFd-HT-Yet" firstAttribute="leading" secondItem="scs-pt-7Z9" secondAttribute="leading" constant="20" id="Ur2-L5-DTx"/>
+                            <constraint firstItem="Vyj-fo-A0G" firstAttribute="leading" secondItem="scs-pt-7Z9" secondAttribute="leading" constant="20" id="Wl9-rn-xOk"/>
+                            <constraint firstItem="scs-pt-7Z9" firstAttribute="trailing" secondItem="Vyj-fo-A0G" secondAttribute="trailing" constant="20" id="hKB-hO-f0P"/>
+                            <constraint firstItem="Vyj-fo-A0G" firstAttribute="centerY" secondItem="siQ-cl-8cC" secondAttribute="centerY" id="mVX-43-Bef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="scs-pt-7Z9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Welcome Page" image="sun.max" catalog="system" id="YvV-aE-8v5"/>
+                    <connections>
+                        <outlet property="iconImage" destination="Vyj-fo-A0G" id="brD-ZX-NJs"/>
+                        <outlet property="welcomeLabel" destination="CFd-HT-Yet" id="i4k-ot-MCs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USE-Yt-Elk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368.11594202898556" y="-691.07142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xB2-HS-sm4">
+            <objects>
+                <tabBarController id="cAt-IJ-TA0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FC4-Rv-TxJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MiZ-5M-dlC" kind="relationship" relationship="viewControllers" id="LLc-DM-zx4"/>
+                        <segue destination="exK-CC-yE9" kind="relationship" relationship="viewControllers" id="MqM-Xb-ksV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jtd-dR-eFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-550" y="-367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="sun.haze.fill" catalog="system" width="64" height="58"/>
+        <image name="sun.max" catalog="system" width="64" height="62"/>
+    </resources>
+</document>
